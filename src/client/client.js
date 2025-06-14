@@ -1,10 +1,11 @@
 import 'babel-polyfill' // define babel helper functions to make use of async/await and similar features
 import React from 'react'
 import ReactDOM from 'react-dom'
-import Routes from './Routes'
+import routes from './routes'
 import { BrowserRouter } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import createStore from '../helpers/createStore'
+import { renderRoutes } from 'react-router-config'
 
 const store = createStore()
 
@@ -14,7 +15,7 @@ const store = createStore()
 ReactDOM.hydrate(
   <Provider store={store}>
     <BrowserRouter>
-      <Routes />
+        <div>{renderRoutes(routes)}</div>
     </BrowserRouter>
   </Provider>, 
   document.getElementById('root')
