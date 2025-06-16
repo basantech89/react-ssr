@@ -7,7 +7,7 @@ import { Provider } from 'react-redux'
 import createStore from '../helpers/createStore'
 import { renderRoutes } from 'react-router-config'
 
-const store = createStore()
+const store = createStore(window.INITIAL_STATE)
 
 // Content is already rendered on the server in this root id element, we're not replacing all the HTML inside it
 // we tell React to go back through and set up all the event listeners, etc. that needs to be executed to kind of 
