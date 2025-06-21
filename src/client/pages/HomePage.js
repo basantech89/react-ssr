@@ -3,8 +3,8 @@ import React from 'react'
 const HomePage = () => {
   return (
     <div>
-      <p>This is the best 2 home page of our application.</p>
-      <button onClick={() => console.log('Hi There!')}>Press me!</button>
+      <h3>Welcome</h3>
+      <p>Check out these awesome features</p>
     </div>
   )
 }
